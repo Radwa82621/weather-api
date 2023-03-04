@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: large;
+    font-family: arial;
+    padding: 0;
+    margin: 0;
+    background-color: #222531;
+
+}
+
+.dark-blue {
+    background-color: #222531;
+
+}
+
+.blue {
+    background-color: #323544;
+
+
+}
+
+.navbar {
+    background-color: #222531;
+
+}
+#navbar .nav-link{
+    padding: 0 10px;
+    font-size: 14px;
+    border: 2px solid transparent;
+    transition: all .5s;
+    border-radius: 30px;
+
+
+}
+#navbar .navbar-nav .nav-link.active,
+#navbar .navbar-nav .show>.nav-link {
+    color: #009ad8;
+    border: 2px solid #009ad8;
+    border-radius: 30px;
+}
+
+#navbar .nav-link:focus,
+#navbar .nav-link:hover {
+    color: #009ad8;
+    border: 2px solid #009ad8;
+    border-radius: 30px;
+}
+.site-title {
+    font-size: 18px;
+}
+
+.site-description {
+    font-size: 15px;
+}
+
+#home {
+    background-image: url(../images/banner.png);
+    height: 60vh;
+    width: 100%;
+    /* background-position: bottom; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 47px;
+}
+
+/* .form-control:focus{
+    background-color: #222531;
+
+  
+} */
+/* .custom-input {
+    color: white;
+
+} */
+/* .custom-input[placeholder]
+{    color: white;
+} */
+/* input{
+    color: white;
+} */
+/* [placeholder] { 
+    color:white;
+  } */
+#searchBtn {
+    right: 13%;
+    top: 5px;
+}
+
+.num {
+    font-size: 90px;
+}
+
+.site-footer .social-links span {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-decoration: none;
+    border-radius: 50%;
+    background: #1e202b;
+    color: #009ad8;
+    text-align: center;
+    transition: all 0.5s;
+    font-size: 20px;
+}
+.site-footer .social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-decoration: none;
+
+}
+.site-footer .social-links span:hover {
+    background: #009ad8;
+}
+.site-footer .social-links span:hover i {
+    color: white;
+}

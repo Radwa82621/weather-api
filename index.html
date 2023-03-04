@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather api </title>
+    <script src="https://kit.fontawesome.com/92de104d46.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-dark navbar-expand-lg fixed-top d-flex align-items-center">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/logo@2x.png" alt="Logo" width="64" height="38"
+                    class="d-inline-block align-text-top me-1">
+                <div class="logo-type ps-2 text-white">
+                    <h1 class="site-title mb-0">Weather</h1>
+                    <small class="site-description">tagline goes here</small>
+                </div>
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0  ">
+                    <li class="nav-item mx-2 ">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#about">News</a>
+                    </li>s
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#team">Live cameras</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#projects">Photos</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#services">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+    </nav>
+    <section id="home">
+
+        <div class="container d-flex align-items-center justify-content-center h-75 w-100">
+            <div class="w-100">
+                <form class="find-location position-relative w-100 ">
+                    <input type="text" placeholder="Find your location..." id="search"
+                        class="custom-input form-control rounded-pill w-75 m-auto py-3  border-0 ">
+                    <button class="btn btn-lg rounded-pill btn-primary position-absolute px-3 "
+                        id="searchBtn">Find</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container text-white ">
+            <div class="row w-75  m-auto overflow-hidden rounded-4">
+                <div class="col-md-4 blue p-0">
+                    <div class="today d-flex justify-content-between  mb-0 p-2" style="background-color: #2D303D;">
+                        <p class="mb-0" id="today"></p>
+                        <p class="mb-0" id="date"></p>
+                    </div>
+                    <div class="forecast-content p-2 " id="current">
+                        <div id="location">Cairo</div>
+                        <div>
+                            <div class="num"><span id="degree"></span> <sup>o</sup>C</div>
+
+                            <div class="forecast-icon">
+                                <img id="forecast-icon" src="" alt="" width="90">
+                            </div>
+
+                        </div>
+                        <div id="custom">Clear</div>
+                        <div class="d-flex justify-content-between w-75 mx-auto mt-3 ">
+                            <div class="d-flex">
+                                <img src="https://routeweather.netlify.app/images/icon-umberella@2x.png" alt=""
+                                    width="21" height="21">
+                                <p id="humidity"></p>
+                            </div>
+                            <div class="d-flex">
+                                <img src="https://routeweather.netlify.app/images/icon-wind@2x.png" alt="" width="23"
+                                    height="21">
+                                <p id="wind-degree"></p>
+                            </div>
+                            <div class="d-flex">
+                                <img src="https://routeweather.netlify.app/images/icon-compass@2x.png" alt="" width="21"
+                                    height="21">
+                                <p id="wind-direction"></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 dark-blue p-0">
+                    <div class="tomorrow d-flex justify-content-between  mb-0 " style="background-color: #222531;">
+                        <p class="mx-auto" id="day2"></p>
+
+                    </div>
+                    <div class="forecast-content h-100  d-flex align-items-center justify-content-center " style="background-color: #262936;">
+                        <div>
+                            <div class="forecast-icon">
+                                <img id="tom-icon" src="" alt="" width="90">
+                            </div>
+                            <div><span id="tom-max"></span> <sup>o</sup>C</div>
+                            <div><span id="tom-min"></span> <sup>o</sup>C</div>
+                            <div id="tom-condition"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 blue p-0">
+
+                    <div class="after-tomorrow d-flex justify-content-between  mb-0 "
+                        style="background-color: #2D303D;">
+                        <p class="mx-auto " id="day3"></p>
+
+                    </div>
+                    <div class="forecast-content h-100  d-flex align-items-center justify-content-center">
+                        <div>
+                            <div class="forecast-icon">
+                                <img id="after-tom-icon" src="" alt="" width="90">
+                            </div>
+                            <div><span id="after-tom-max"></span> <sup>o</sup>C</div>
+                            <div><span id="after-tom-min"></span> <sup>o</sup>C</div>
+                            <div id="after-tom-condition"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="site-footer text-white mt-5 py-2" style="background-color: #2D303D;">
+            <div class="container mt-5">
+                <div class="row align-items-center justify-content-between mb-3  ">
+                    <div class="col-md-8">
+                        <form class="subscribe-form position-relative w-100 ">
+                            <input type="text" placeholder="Enter your email to subscribe..."
+                                class=" form-control rounded-pill  py-3  border-0 ">
+                            <button class="btn btn-lg rounded-pill btn-primary position-absolute px-3 py-2 "
+                                style="right: 1%; bottom: 5px;">Subscribe</button>
+                        </form>
+                    </div>
+                  
+                    <div class=" col-md-3 ">
+                        <div class="social-links d-flex">
+                           <span class="mx-1"> <a href="#"><i class="fa fa-facebook"></i></a></span>
+                           <span class="mx-1">  <a  href="#"><i class="fa fa-twitter"></i></a></span>
+                           <span class="mx-1"><a  href="#"><i class="fa fa-google-plus"></i></a></span>
+                           <span class="mx-1"><a  href="#"><i class="fa fa-pinterest"></i></a></span>
+                        </div>
+                    </div>
+                </div>
+                <p class="fs-6 text-white-50 pb-5 ">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+
+            </div>
+        </footer>
+
+    </section>
+
+   
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
